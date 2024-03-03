@@ -1,27 +1,55 @@
-# SaizeriyaGacha
+# アプリケーションについて
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+## 使用技術
 
-## Development server
+### 言語
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![Node.js](https://img.shields.io/badge/Node-v20.9.0-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-v5.2.2-blue)
 
-## Code scaffolding
+### パッケージマネージャー
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![npm](https://img.shields.io/badge/npm-v10.1.0-blue)
 
-## Build
+### ライブラリ
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![Angular](https://img.shields.io/badge/Angular-v17.0.3-blue)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v3.4.1-blue)
 
-## Running unit tests
+### リンター・フォーマッター
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![ESLint](https://img.shields.io/badge/ESLint-v8.56.0-blue)
+![Prettier](https://img.shields.io/badge/Prettier-v3.2.5-blue)
 
-## Running end-to-end tests
+### ホスティング
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![GithubPages](https://img.shields.io/badge/Vercel-Supported-blue)
 
-## Further help
+## セットアップ
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. `git clone`
+2. `cd`コマンドでプロジェクトへ移動
+3. `npm install`
+4. `ng serve --open`
+
+## ESLint / Prettier のセットアップ
+
+1. `ng lint`
+   - Would you like to add ESLint now? (Y/n) -> Y
+   - Would you like to proceed? (Y/n) -> Y
+2. `ng lint`（リントが走るか確認）
+   - 「All files pass linting.」とログに出力されればOK
+3. `npm install -D prettier eslint-config-prettier`
+4. eslintrcの`overrides/extends`の末尾に`"prettier"`を追加
+5. `.prettierrc.yml`を作成 && 以下をコピペ
+
+```yml
+printWidth: 120
+singleQuote: true
+trailingComma: all
+```
+
+6. npm scripts にリンター・フォーマッターのコマンドを追加
+   - `"lint-fix": "eslint --cache --fix src/ && prettier --write src/"`
+
+## 【モデル】SaizeriyaMenu, GachaResult について
