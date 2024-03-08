@@ -8,6 +8,9 @@ module.exports = {
       },
     },
   },
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   darkMode: 'class',
   plugins: [require('tw-elements/dist/plugin.cjs')],
 };
