@@ -51,5 +51,3 @@ trailingComma: all
 
 6. npm scripts にリンター・フォーマッターのコマンドを追加
    - `"lint-fix": "eslint --cache --fix src/ && prettier --write src/"`
-
-## 【モデル】SaizeriyaMenu, GachaResult について
